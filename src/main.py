@@ -1,12 +1,17 @@
 import time
-
+  
+# Period related variables
 months = 500 * 12
-currency = '$'
-bankbalance = 0.00
-deposit = 1
-interest = 4.5
+salary = 10
+annual_increase = 3
 principle = 0
 year = 1
+
+# Bank account related variables
+currency = '$'
+bankbalance = 0.00
+deposit = salary * 0.1
+interest = 4.5
 
 print("Year " + str(year))
 print(currency + '{:,.2f}'.format(bankbalance))
@@ -19,9 +24,12 @@ while months > 0:
     print()
     year = year + 1
     print("Year " + str(year))
+    salary = salary + (salary * (annual_increase/100))
+    deposit = salary/10
+    print("Salary: $" + str(salary))
        
   print(currency + '{:,.2f}'.format(bankbalance))
-  time.sleep(1/24)
+  #time.sleep(1/24)
 
 print()  
 print("Principle: " + currency + str('{:,.2f}'.format(principle)))
