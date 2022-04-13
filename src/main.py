@@ -1,7 +1,14 @@
 import time
+
+years = int(input("How many years, is your vampire investing his income for? "))
+
+def period(y):  
+  m = y * 12
+  return m
+
+months = period(years)
   
 # Period related variables
-months = 500 * 12
 salary = 10
 annual_increase = 3
 principle = 0
